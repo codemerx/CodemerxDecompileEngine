@@ -826,8 +826,7 @@ namespace Telerik.JustDecompiler.Decompiler
 			// 
 			// Current member / type: System.Void Telerik.JustDecompiler.Decompiler.StatementDecompilerStep::ProcessCfgBlockLogicalConstruct(Telerik.JustDecompiler.Decompiler.LogicFlow.CFGBlockLogicalConstruct,System.Collections.Generic.List`1<Telerik.JustDecompiler.Ast.Statements.Statement>,System.Boolean,System.Boolean)
 			// Exception in: System.Void ProcessCfgBlockLogicalConstruct(Telerik.JustDecompiler.Decompiler.LogicFlow.CFGBlockLogicalConstruct,System.Collections.Generic.List<Telerik.JustDecompiler.Ast.Statements.Statement>,System.Boolean,System.Boolean)
-			// Specified argument was out of the range of valid values.
-			// Parameter name: Target of array indexer expression is not an array.
+			// Specified argument was out of the range of valid values. (Parameter 'Target of array indexer expression is not an array.')
 			// 
 			// mailto: JustDecompilePublicFeedback@telerik.com
 

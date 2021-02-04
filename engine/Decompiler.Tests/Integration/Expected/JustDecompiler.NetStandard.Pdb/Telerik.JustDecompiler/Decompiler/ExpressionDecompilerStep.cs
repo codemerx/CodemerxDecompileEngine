@@ -2152,8 +2152,7 @@ namespace Telerik.JustDecompiler.Decompiler
 			// 
 			// Current member / type: System.Void Telerik.JustDecompiler.Decompiler.ExpressionDecompilerStep::PushCastExpression(Mono.Cecil.TypeReference,Mono.Cecil.Cil.Instruction)
 			// Exception in: System.Void PushCastExpression(Mono.Cecil.TypeReference,Mono.Cecil.Cil.Instruction)
-			// Specified argument was out of the range of valid values.
-			// Parameter name: Target of array indexer expression is not an array.
+			// Specified argument was out of the range of valid values. (Parameter 'Target of array indexer expression is not an array.')
 			// 
 			// mailto: JustDecompilePublicFeedback@telerik.com
 
