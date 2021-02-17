@@ -274,6 +274,12 @@ namespace Mono.Cecil.AssemblyResolver
             {
                 return TargetPlatform.NetCore;
             }
+            /* AGPL */
+            else if (targetFrameworkAttribute.Identifier == ".NETStandard")
+            {
+                return TargetPlatform.NetStandard;
+            }
+            /* End AGPL */
             else if (targetFrameworkAttribute.Identifier == ".NETFramework" && targetFrameworkAttribute.Version.Major == 4)
             {
                 return TargetPlatform.CLR_4;

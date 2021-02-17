@@ -63,6 +63,10 @@ namespace Mono.Cecil.AssemblyResolver
                     return FrameworkVersion.v3_5;
                 case TargetPlatform.NetCore:
                     return GetFrameworkVersionInternal(module, TargetPlatform.NetCore);
+                /* AGPL */
+                case TargetPlatform.NetStandard:
+                    return GetFrameworkVersionInternal(module, TargetPlatform.NetStandard);
+                /* End AGPL */
                 case TargetPlatform.WinRT:
                     return GetFrameworkVersionInternal(module, TargetPlatform.WinRT);
                 case TargetPlatform.Xamarin:
@@ -180,7 +184,11 @@ namespace Mono.Cecil.AssemblyResolver
                 if (frameworkName.Identifier == ".NETCoreApp")
                 {
                     /* AGPL */
-                    if (frameworkName.Version == new Version(3, 1))
+                    if (frameworkName.Version == new Version(5, 0))
+                    {
+                        return FrameworkVersion.NetCoreV5_0;
+                    }
+                    else if (frameworkName.Version == new Version(3, 1))
                     {
                         return FrameworkVersion.NetCoreV3_1;
                     }
@@ -211,6 +219,50 @@ namespace Mono.Cecil.AssemblyResolver
                     }
                 }
             }
+            /* AGPL */
+            else if (targetPlatform == TargetPlatform.NetStandard)
+            {
+                if (frameworkName.Identifier == ".NETStandard")
+                {
+                    if (frameworkName.Version == new Version(2, 1))
+                    {
+                        return FrameworkVersion.NetStandardV2_1;
+                    }
+                    else if (frameworkName.Version == new Version(2, 0))
+                    {
+                        return FrameworkVersion.NetStandardV2_0;
+                    }
+                    else if (frameworkName.Version == new Version(1, 6))
+                    {
+                        return FrameworkVersion.NetStandardV1_6;
+                    }
+                    else if (frameworkName.Version == new Version(1, 5))
+                    {
+                        return FrameworkVersion.NetStandardV1_5;
+                    }
+                    else if (frameworkName.Version == new Version(1, 4))
+                    {
+                        return FrameworkVersion.NetStandardV1_4;
+                    }
+                    else if (frameworkName.Version == new Version(1, 3))
+                    {
+                        return FrameworkVersion.NetStandardV1_3;
+                    }
+                    else if (frameworkName.Version == new Version(1, 2))
+                    {
+                        return FrameworkVersion.NetStandardV1_2;
+                    }
+                    else if (frameworkName.Version == new Version(1, 1))
+                    {
+                        return FrameworkVersion.NetStandardV1_1;
+                    }
+                    else if (frameworkName.Version == new Version(1, 0))
+                    {
+                        return FrameworkVersion.NetStandardV1_0;
+                    }
+                }
+            }
+            /* End AGPL */
             else if (targetPlatform == TargetPlatform.Xamarin)
             {
                 if (frameworkName.Identifier == "MonoAndroid")
@@ -337,6 +389,10 @@ namespace Mono.Cecil.AssemblyResolver
                         else if (modulePath[modulePath.Length - 2].StartsWith("3.1"))
                         {
                             frameworkVersion = FrameworkVersion.NetCoreV3_1;
+                        }
+                        else if (modulePath[modulePath.Length - 2].StartsWith("5.0"))
+                        {
+                            frameworkVersion = FrameworkVersion.NetCoreV5_0;
                         }
                         /* End AGPL */
                     }

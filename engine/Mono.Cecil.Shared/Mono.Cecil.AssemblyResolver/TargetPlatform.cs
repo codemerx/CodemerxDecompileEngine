@@ -14,6 +14,9 @@
 		WindowsCE,
         WinRT,
 		NetCore,
+		/* AGPL */
+		NetStandard,
+		/* End AGPL */
 		Xamarin
 	}
 }

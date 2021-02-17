@@ -219,6 +219,9 @@ namespace Telerik.JustDecompiler.Common
                     result = "UWP";
                     break;
                 /* AGPL */
+                case FrameworkVersion.NetCoreV5_0:
+                    result = "net5.0";
+                    break;
                 case FrameworkVersion.NetCoreV3_1:
                     result = "netcoreapp3.1";
                     break;
@@ -241,7 +244,36 @@ namespace Telerik.JustDecompiler.Common
 				case FrameworkVersion.NetCoreV1_0:
 					result = "netcoreapp1.0";
 					break;
-				case FrameworkVersion.Silverlight:
+                /* AGPL */
+                case FrameworkVersion.NetStandardV2_1:
+                    result = "netstandard2.1";
+                    break;
+                case FrameworkVersion.NetStandardV2_0:
+                    result = "netstandard2.0";
+                    break;
+                case FrameworkVersion.NetStandardV1_6:
+                    result = "netstandard1.6";
+                    break;
+                case FrameworkVersion.NetStandardV1_5:
+                    result = "netstandard1.5";
+                    break;
+                case FrameworkVersion.NetStandardV1_4:
+                    result = "netstandard1.4";
+                    break;
+                case FrameworkVersion.NetStandardV1_3:
+                    result = "netstandard1.3";
+                    break;
+                case FrameworkVersion.NetStandardV1_2:
+                    result = "netstandard1.2";
+                    break;
+                case FrameworkVersion.NetStandardV1_1:
+                    result = "netstandard1.1";
+                    break;
+                case FrameworkVersion.NetStandardV1_0:
+                    result = "netstandard1.0";
+                    break;
+                /* End AGPL */
+                case FrameworkVersion.Silverlight:
                 case FrameworkVersion.WindowsCE:
                 case FrameworkVersion.WindowsPhone:
                     return self.ToString();

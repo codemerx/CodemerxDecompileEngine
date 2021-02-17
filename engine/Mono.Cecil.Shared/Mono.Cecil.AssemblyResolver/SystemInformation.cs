@@ -65,7 +65,9 @@ namespace Mono.Cecil.AssemblyResolver
 
         public static string[] SILVERLIGHT_VERSIONS = new string[] { "v4.0", "v5.0", "v3.0", "v2.0" };
 
-		public static string[] NETCORE_VERSIONS = new string[] { "1.0", "1.1", "2.0", "2.1", "2.2", "3.0", "3.1" };
+        /* AGPL */
+		public static string[] NETCORE_VERSIONS = new string[] { "1.0", "1.1", "2.0", "2.1", "2.2", "3.0", "3.1", "5.0" };
+        /* End AGPL */
 
         public static readonly string[] CoreAssemblies = { 
                                                               "mscorlib.dll",

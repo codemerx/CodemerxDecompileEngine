@@ -37,15 +37,27 @@ namespace Mono.Cecil.AssemblyResolver
         UWP,
 		WinRT_System,
         /* AGPL */
+		NetCoreV5_0,
 		NetCoreV3_1,
-		NetCoreV3_0,
+        NetCoreV3_0,
 		NetCoreV2_2,
         /* End AGPL */
 		NetCoreV2_1,
         NetCoreV2_0,
 		NetCoreV1_1,
 		NetCoreV1_0,
-		XamarinAndroid,
+        /* AGPL */
+        NetStandardV1_0,
+        NetStandardV1_1,
+        NetStandardV1_2,
+        NetStandardV1_3,
+        NetStandardV1_4,
+        NetStandardV1_5,
+        NetStandardV1_6,
+        NetStandardV2_0,
+        NetStandardV2_1,
+        /* End AGPL */
+        XamarinAndroid,
 		XamarinIOS
 	}
 }
